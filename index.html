@@ -1278,20 +1278,28 @@ footer {
       </div>
       <div class="exp-body">
         <ul class="exp-bullets">
+          <li><strong>Production Cron Optimization (~240&times; Speedup):</strong> Accelerated a production order-missing and payment-status processing cron by <strong>~240&times;</strong>, replacing sequential execution with a Python <code>asyncio</code>-based parallel processing workflow and slashing runtime from <strong>~20 minutes to ~5 seconds</strong>.</li>
           <li><strong>Production Database Migration (Zero Data Loss):</strong> Collaborated and led the migration of a mission-critical production MySQL database consisting of <strong>178 tables and ~1.2M records</strong> to PostgreSQL (Supabase) with zero downtime or data loss.</li>
-          <li><strong>Automated Schema &amp; DDL Transformation:</strong> Developed Python-based schema transformation scripts to systematically map MySQL datatypes and convert complex DDL into PostgreSQL-compatible relational structures.</li>
-          <li><strong>High-Throughput Batch ETL Pipeline:</strong> Engineered a robust batch ETL pipeline with chunked reads and writes to ensure stable bulk data transfer while eliminating long transaction locks.</li>
-          <li><strong>Dependency-Aware Ordering &amp; Validation:</strong> Executed dependency-aware migration ordering to preserve primary and foreign key relational integrity; implemented rigorous row-count reconciliation, MD5 checksum validation, and constraint verification.</li>
-          <li><strong>Query Optimization &amp; Stakeholder Trust:</strong> Optimized PostgreSQL indexing and stripped legacy database artifacts to dramatically enhance query latency, consulting executive stakeholders throughout the migration lifecycle.</li>
+          <li><strong>Automated Live Database Backup Pipeline:</strong> Built a production database backup pipeline in Python that executes daily automated live DB dumps from the source production database to <strong>AWS S3</strong>, with automated lifecycle cleanup of older backups to maintain storage efficiency and disaster-recovery readiness.</li>
+          <li><strong>Logical Replication (Supabase &rarr; AWS RDS):</strong> Implemented logical replication from the production Supabase PostgreSQL database to <strong>AWS RDS</strong>, establishing a near-real-time database replica for continuous synchronization and independent disaster recovery.</li>
+          <li><strong>Incremental CDN Asset Sync (Bunny.net &rarr; AWS S3):</strong> Engineered an incremental Bunny.net &rarr; AWS S3 image synchronization pipeline in Python, automatically detecting and syncing newly added production images to maintain an up-to-date secondary image backup.</li>
+          <li><strong>Row-Level Security (RLS) Architecture:</strong> Implemented <strong>Row-Level Security (RLS)</strong> across the production PostgreSQL database, enforcing granular tenant/data-access controls and improving production data isolation and security.</li>
+          <li><strong>Automated Codebase Disaster Recovery:</strong> Built an automated GitHub repository backup pipeline in Python, detecting modified repositories and storing updated repository backups in <strong>AWS S3</strong> to provide an additional disaster-recovery layer for the codebase.</li>
+          <li><strong>Automated Schema &amp; DDL Transformation:</strong> Developed Python-based schema transformation scripts to map MySQL datatypes and convert complex DDL into PostgreSQL-compatible relational structures.</li>
+          <li><strong>High-Throughput Batch ETL Pipeline:</strong> Engineered a robust batch ETL pipeline with chunked reads/writes, dependency-aware ordering, and MD5 checksum validation to ensure stable bulk data transfer and data integrity.</li>
         </ul>
         <div class="exp-tech-stack">
           <span class="tech-pill">Python</span>
-          <span class="tech-pill">MySQL</span>
+          <span class="tech-pill">Asyncio</span>
           <span class="tech-pill">PostgreSQL</span>
           <span class="tech-pill">Supabase</span>
+          <span class="tech-pill">AWS S3</span>
+          <span class="tech-pill">AWS RDS</span>
+          <span class="tech-pill">Logical Replication</span>
+          <span class="tech-pill">Row-Level Security (RLS)</span>
+          <span class="tech-pill">Bunny.net CDN</span>
           <span class="tech-pill">Batch ETL</span>
-          <span class="tech-pill">DDL Transformation</span>
-          <span class="tech-pill">Checksum Reconciliation</span>
+          <span class="tech-pill">Disaster Recovery</span>
         </div>
       </div>
     </div>
@@ -1654,8 +1662,8 @@ footer {
           <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
         </div>
         <div>
-          <div class="bar-label-row"><span class="bar-name">C++ &amp; Java</span><span class="bar-pct">75%</span></div>
-          <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+          <div class="bar-label-row"><span class="bar-name">FastAPI &amp; REST APIs</span><span class="bar-pct">88%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="88"></div></div>
         </div>
         <div>
           <div class="bar-label-row"><span class="bar-name">HTML &amp; CSS</span><span class="bar-pct">80%</span></div>
@@ -1797,13 +1805,13 @@ footer {
           </div>
         </a>
 
-        <a href="mailto:dubey.prashant2710@gmail.com" class="contact-card-link">
+        <a href="mailto:developer.prashant172@gmail.com" class="contact-card-link">
           <div class="c-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
           <div>
             <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;">Direct Email</div>
-            <div>dubey.prashant2710@gmail.com</div>
+            <div>developer.prashant172@gmail.com</div>
           </div>
         </a>
 
@@ -1830,7 +1838,7 @@ footer {
     </div>
 
     <div class="reveal-right">
-      <form class="contact-form" id="contact-form" action="https://formsubmit.co/dubey.prashant2710@gmail.com" method="POST">
+      <form class="contact-form" id="contact-form" action="https://formsubmit.co/developer.prashant172@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="New Portfolio Contact &middot; Prashant Dubey" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="table" />
@@ -1865,7 +1873,7 @@ footer {
   <div class="footer-text">Prashant Dubey &middot; Data Engineer &amp; Machine Learning Specialist &middot; Mumbai, India</div>
   <div class="footer-socials">
     <a href="https://linkedin.com/in/prashant-dubey-345242264" target="_blank" class="footer-social-btn" title="LinkedIn">in</a>
-    <a href="mailto:dubey.prashant2710@gmail.com" class="footer-social-btn" title="Email">
+    <a href="mailto:developer.prashant172@gmail.com" class="footer-social-btn" title="Email">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
     </a>
   </div>
@@ -2070,7 +2078,7 @@ if (contactForm && submitBtn) {
     const formData = new FormData(contactForm);
 
     try {
-      const res = await fetch('https://formsubmit.co/ajax/dubey.prashant2710@gmail.com', {
+      const res = await fetch('https://formsubmit.co/ajax/developer.prashant172@gmail.com', {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
         body: formData
